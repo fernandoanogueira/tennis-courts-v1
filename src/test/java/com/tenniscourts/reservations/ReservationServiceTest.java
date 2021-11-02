@@ -1,6 +1,5 @@
 package com.tenniscourts.reservations;
 
-import com.tenniscourts.schedules.Schedule;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -10,6 +9,10 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
+
+import com.tenniscourts.entity.Reservation;
+import com.tenniscourts.entity.Schedule;
+import com.tenniscourts.service.ReservationService;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
