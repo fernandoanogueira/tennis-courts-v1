@@ -28,7 +28,9 @@ public class ReservationService {
     private final ModelMapper modelMapper;
 
     public ReservationDTO bookReservation(CreateReservationRequestDTO createReservationRequestDTO) {
-        throw new UnsupportedOperationException();
+    	Reservation reservation = modelMapper.map(createReservationRequestDTO, Reservation.class);
+    	reservation = reservationRepository.save(reservation);
+    	return modelMapper.map(reservation, ReservationDTO.class);
     }
 
     public ReservationDTO findReservation(Long reservationId) {
